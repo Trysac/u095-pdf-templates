@@ -9,4 +9,5 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Added
 
+- Added safe text templates, a minimal markup parser, a pure layout engine and deterministic pdf-lib rendering through `generatePdf`, with typed `PdfTemplateError` codes and documented size, depth and page limits.
 - Initial project structure from the factory utility template.

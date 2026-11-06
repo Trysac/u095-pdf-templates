@@ -4,6 +4,7 @@
 
 | Tool | Purpose | Why |
 |---|---|---|
+| pdf-lib (^1.17.1) | PDF document creation, standard fonts and text measurement | Pure JavaScript, no browser; the only runtime dependency. |
 | TypeScript (strict) | Language and type checking | Typed public API and declarations for consumers. |
 | Node.js 20+ | Runtime | Maintained LTS lines with native ES modules. |
 | Vitest + `@vitest/coverage-v8` | Tests and coverage | Fast, ESM-native, runs TypeScript without a build step. |
@@ -19,5 +20,4 @@
 | Jest | Needs extra transforms for ESM and TypeScript; slower. |
 | Shell scripts for gates | Not portable to Windows; the gate runner is a Node script. |
 | Bundlers (tsup, Rollup) | Unneeded for a small ESM library; `tsc` emits what is published. |
-
-Add a row whenever a dependency or tool is added or rejected.
+| Headless browser (Puppeteer) | Heavy, slow and non-deterministic output for simple documents. |

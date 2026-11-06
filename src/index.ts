@@ -1,20 +1,33 @@
 /**
  * Public entry point of @trysac/pdf-templates.
  *
- * Replace this placeholder with the utility's real API. Keep every export documented and covered by tests.
+ * Safe text templates, a minimal markup, a pure layout engine and a
+ * deterministic pdf-lib renderer behind a small port.
  */
 
-/**
- * Builds a greeting for `name`.
- *
- * @param name - Who to greet. Surrounding whitespace is ignored.
- * @returns The greeting, for example `"Hello, Ada!"`.
- * @throws {TypeError} When `name` is empty after trimming.
- */
-export function greet(name: string): string {
-  const trimmed = name.trim();
-  if (trimmed === "") {
-    throw new TypeError("name must not be empty");
-  }
-  return `Hello, ${trimmed}!`;
-}
+export type {
+  PdfTemplateErrorCode,
+  PdfTemplateErrorDetails,
+} from "./errors.js";
+export { PdfTemplateError } from "./errors.js";
+export type { GeneratePdfOptions } from "./generate.js";
+export { generatePdf } from "./generate.js";
+export type {
+  FontMetrics,
+  LaidOutPage,
+  LayoutOp,
+  LineOp,
+  PageSpec,
+  TextOp,
+} from "./layout.js";
+export { layout } from "./layout.js";
+export type { Block, DocumentModel } from "./markup.js";
+export { parseDocument } from "./markup.js";
+export type {
+  PdfLibRendererOptions,
+  PdfMeta,
+  PdfRenderer,
+} from "./renderers.js";
+export { createFakeRenderer, createPdfLibRenderer } from "./renderers.js";
+export type { RenderOptions } from "./template.js";
+export { renderTemplate } from "./template.js";
