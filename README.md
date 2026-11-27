@@ -1,7 +1,6 @@
 # pdf-templates
 
-[![npm version](https://img.shields.io/npm/v/@trysac/pdf-templates.svg)](https://www.npmjs.com/package/@trysac/pdf-templates)
-[![license: MIT](https://img.shields.io/npm/l/@trysac/pdf-templates.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![CI](https://github.com/Trysac/u095-pdf-templates/actions/workflows/ci.yml/badge.svg)](https://github.com/Trysac/u095-pdf-templates/actions/workflows/ci.yml)
 
 Render letters, reports and certificates from safe text templates to deterministic PDFs, with a pure layout engine and a renderer port.
@@ -12,9 +11,15 @@ Generating simple business documents usually means running headless Chromium to 
 
 ## Install
 
+Not published to npm yet. Build it from a clone, then install it from the local path:
+
 ```sh
-npm install @trysac/pdf-templates
+git clone https://github.com/Trysac/u095-pdf-templates.git
+cd u095-pdf-templates && npm ci && npm run build
+cd ../your-project && npm install ../u095-pdf-templates
 ```
+
+Imports keep the package name: `import { ... } from "@trysac/pdf-templates"`.
 
 Requires Node.js 20 or newer. The package ships ES modules with TypeScript declarations. Its only runtime dependency is `pdf-lib` (^1.17.1).
 
